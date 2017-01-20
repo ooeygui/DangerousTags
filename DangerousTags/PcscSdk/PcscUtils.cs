@@ -112,6 +112,9 @@ namespace Pcsc
                 query += " AND System.Devices.SmartCards.ReaderKind:=" + (int)readerKind;
             }
 
+            string query2 = Windows.Devices.SmartCards.SmartCardReader.GetDeviceSelector();
+
+
             DeviceInformationCollection devices = await DeviceInformation.FindAllAsync(query);
 
             // There is a bug on some devices that were updated to WP8.1 where an NFC SmartCardReader is

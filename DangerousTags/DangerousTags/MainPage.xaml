@@ -31,32 +31,29 @@
                     </ScrollViewer>
                 </Grid>
             </PivotItem>
-            <PivotItem Header="Bitcoin">
-                <Grid/>
-            </PivotItem>
             <PivotItem Header="Setup">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0"  x:Name="passwordLabel" Margin="5,11,309,11" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="20"/>
-                    <PasswordBox Grid.Row="0" Grid.Column="1" x:Name="passwordBox" Margin="10,5,5,5" HorizontalAlignment="Stretch" PlaceholderText="AABBCCDD" />
-                    <TextBlock Grid.Row="1" Grid.Column="0" x:Name="passwordAckLabel" Margin="5,11,309,11" TextWrapping="Wrap" Text="Password Ack:" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="20"/>
-                    <PasswordBox Grid.Row="1" Grid.Column="1" x:Name="passwordAckBox" Margin="10,5,5,5" HorizontalAlignment="Stretch" PlaceholderText="EEFF" />
-                    <CheckBox Grid.Row="2" Grid.Column="1" x:Name="autoProvision" Content="Automatically Provision NTAG21x tags" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Margin="5,0,0,0" Width="280"/>
-                    <TextBlock Grid.Row="3" Grid.Column="0" x:Name="bitcoinLabel" Margin="5,5,309,5.4" TextWrapping="Wrap" Text="Bitcoin Hash:" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="20"/>
-                    <TextBox Grid.Row="3" Grid.Column="1" x:Name="bitcoinHashTextBox" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="" PlaceholderText="Enter bitcoin hash" VerticalAlignment="Top" Height="32" Margin="5,0,0,0"/>
-                    <TextBlock Grid.Row="4" Grid.Column="0" x:Name="bitcoinPrivateLabel" Margin="5,6,309,6" TextWrapping="Wrap" Text="Bitcoin Key:" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="20"/>
-                    <TextBox Grid.Row="4" Grid.Column="1" x:Name="bitcoinPrivateKeyTextBox" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="" PlaceholderText="Enter bitcoin private key" VerticalAlignment="Top" Height="32" Margin="5,0,0,0"/>
-                    <Button Grid.Row="5" Grid.ColumnSpan="2" x:Name="savePassword" Margin="15,15,15,15" Content="Save" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="savePassword_Click"/>
+                    <CheckBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="autoProvision" Content="Automatically Provision NTAG21x tags" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Margin="5,0,0,0" />
+                    <TextBlock Grid.Row="1" Grid.Column="0"  x:Name="passwordLabel" Margin="5,11,0,11" Text="Password:" VerticalAlignment="Center" Height="20"/>
+                    <PasswordBox Grid.Row="1" Grid.Column="1" x:Name="passwordBox" Margin="10,5,5,5" HorizontalAlignment="Stretch" PlaceholderText="AABBCCDD" />
+                    <TextBlock Grid.Row="2" Grid.Column="0" x:Name="passwordAckLabel" Margin="5,11,0,11" Text="Password Ack:" VerticalAlignment="Center" Height="20"/>
+                    <PasswordBox Grid.Row="2" Grid.Column="1" x:Name="passwordAckBox" Margin="10,5,5,5" HorizontalAlignment="Stretch" PlaceholderText="EEFF" />
+                    <TextBlock Grid.Row="3" Grid.Column="0" x:Name="bitcoinLabel" Margin="5,5,5,5.4" Text="Bitcoin Hash:" VerticalAlignment="Center" Height="20"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" x:Name="bitcoinHashTextBox" HorizontalAlignment="Stretch" Text="" TextWrapping="Wrap" PlaceholderText="Enter bitcoin hash" VerticalAlignment="Stretch" Height="32" Margin="5,0,0,0"/>
+                    <TextBlock Grid.Row="4" Grid.Column="0" x:Name="bitcoinPrivateLabel" Margin="5,6,5,6" TextWrapping="Wrap" Text="Bitcoin Key:" VerticalAlignment="Center" Height="20"/>
+                    <TextBox Grid.Row="4" Grid.Column="1" x:Name="bitcoinPrivateKeyTextBox" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="" PlaceholderText="Enter bitcoin private key" VerticalAlignment="Stretch" Height="32" Margin="5,0,0,0"/>
                 </Grid>
             </PivotItem>
         </Pivot>

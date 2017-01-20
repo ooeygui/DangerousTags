@@ -94,7 +94,6 @@ namespace DangerousTags
             var ignored = this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
             {
                 UidPanel.Visibility = Visibility.Visible;
-                PasswordPanel.Visibility = Visibility.Visible;
                 AccessPanel.Visibility = Visibility.Visible;
             });
         }
